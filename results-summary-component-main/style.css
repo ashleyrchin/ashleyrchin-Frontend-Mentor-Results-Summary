@@ -1,0 +1,212 @@
+:root {
+    --light-red: hsl(0, 100%, 67%);
+    --orange-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+
+    --light-slate-blue: hsl(252, 100%, 67%);
+    --light-royal-blue: hsl(241, 81%, 54%);
+    --violet-blue: hsla(256, 72%, 46%, 1);
+    --persian-blue: hsla(241, 72%, 46%, 0);
+
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 89%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+
+    --font-family: "Hanken Grotesk", sans-serif;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+    --font-weight-extra-bold: 800;
+
+    --base-spacing: 1rem;
+    --section-padding: 2.5rem;
+
+    --base-font-size: 1.125rem;
+    --small-font-size: 0.875rem;
+
+    --border-radius: 20px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--white);
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.5;
+}
+
+p {
+    font-size: var(--base-font-size);
+    margin: 0;
+}
+
+.card {
+    max-width: 46rem;
+    box-shadow: 0px 10px 10px 0px hsl(216, 37%, 76%);
+    border-radius: var(--border-radius);
+    display: flex;
+    overflow: hidden;
+}
+
+.result-section {
+    background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+    color: var(--light-lavender);
+    text-align: center;
+    padding: var(--section-padding);
+    flex: 1;
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-title {
+    font-size: 1.25rem;
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--base-spacing);
+}
+
+.score-circle {
+    background: linear-gradient(var(--violet-blue), var(--persian-blue));
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem 0;
+}
+
+.score-big {
+    color: var(--white);
+    font-size: 3.75rem;
+    font-weight: var(--font-weight-extra-bold);
+    line-height: 1;
+}
+
+.score {
+    font-weight: var(--font-weight-extra-bold);
+    color: var(--white);
+    line-height: 1;
+}
+
+.total-score {
+    font-weight: var(--font-weight-medium);
+    opacity: 0.7;
+}
+
+.feedback {
+    padding: 0 3.5rem;
+}
+
+.feedback-title {
+    color: var(--white);
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.feedback-text {
+    color: var(--light-lavender);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.summary-section {
+    padding: var(--section-padding);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.category-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+  
+.category {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0.75rem;
+}
+
+.category-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.category-name {
+    font-weight: var(--font-weight-bold);
+}
+
+.category-score {
+    color: hsla(224, 30%, 27%, 0.5);
+    font-weight: var(--font-weight-extra-bold);
+}
+  
+.category-score span {
+    color: var(--dark-gray-blue);
+}
+
+/* category styles */
+.reaction {
+    background-color: hsla(0, 100%, 67%, 0.05);
+    color: var(--light-red);
+}
+
+.memory {
+    background-color: hsla(39, 100%, 56%, 0.05);
+    color: var(--orange-yellow);
+}
+
+.verbal {
+    background-color: hsla(166, 100%, 37%, 0.05);
+    color: var(--green-teal);
+}
+
+.visual {
+    background-color: hsla(234, 85%, 45%, 0.05);
+    color: var(--cobalt-blue);
+}
+
+button {
+    border: none;
+    background-color: var(--dark-gray-blue);
+    color: var(--white);
+    padding: 1rem;
+    border-radius: 1.56rem;
+    font-size: 1rem;
+    font-weight: var(--font-weight-bold);
+    cursor: pointer;
+}
+
+/* rendering for mobile specifically */
+@media(max-width: 768px) {
+    .card {
+        flex-direction: column;
+        border-radius: 0 0 2rem 2rem;
+    }
+
+    .result-section {
+        border-radius: 0 0 2rem 2rem;
+    }
+
+    .section-title {
+        font-size: 1.1rem;
+    }
+}
