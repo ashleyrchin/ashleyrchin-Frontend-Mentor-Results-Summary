@@ -23,7 +23,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Screenshot](./result-summary-component-main/assets/images/ashleyrchin-resultsSummarySolution.png)
+![Screenshot](./results-summary-component-main/assets/images/ashleyrchin-resultsSummarySolution.png)
 
 ## My process
 
